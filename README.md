@@ -30,6 +30,8 @@ Save using ctrl+s and then ctrl+x
 
 Scroll down to `Cesium.Ion.defaultAccessToken = '';` Replace this with your token aswell.
 
+Again do ctrl+s and ctrl+x
+
 Running the script:
 We can now try running the script with:
 `python3 python3 '/home/pi/ADS-B-3D/ADS-B 3D/server.py'`
