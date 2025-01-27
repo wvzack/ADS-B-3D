@@ -2,7 +2,7 @@
 Scripts for viewing your dump-1090 data on a 3D map. This containes 3D models that will be your aircraft which will move around a 3D globe as your dump-1090 data updates.
 
 # Disclaimer
-This is currently in a very early stage of development (this is also my first real JS/HTML project), so please don't expect a perfect repository. I will also most likely not be of much help with problems that have to do with installation/setup; however, I would love it if everyone reported bugs in issues so that I can fix them. 
+This is currently in a very early stage of development (this is also my first real JS/HTML project), so please don't expect a perfect repository. I will also most likely not be of much help with problems that have to do with installation/setup; however, I would love it if everyone reported bugs in issues so that I can fix them. The installation instructions might also be a bit bad I will work on them the next time I have time.
 
 Thanks!
 # Installation
