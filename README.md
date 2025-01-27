@@ -1,5 +1,5 @@
 # ADS-B-3D
-Scripts for viewing your dump-1090 data on a 3D map.
+Scripts for viewing your dump-1090 data on a 3D map. This containes 3D models that will be your aircraft which will move around a 3D globe as your dump-1090 data updates.
 
 # Disclaimer
 This is currently in a very early stage of development (this is also my first real JS/HTML project), so please don't expect a perfect repository. I will also most likely not be of much help with problems that have to do with installation/setup; however, I would love it if everyone reported bugs in issues so that I can fix them. 
@@ -37,6 +37,8 @@ We can now try running the script with:
 `python3 python3 '/home/pi/ADS-B-3D/ADS-B 3D/server.py'`
 
 If you receive module not found errors, follow the installation instructions below. If the globe doesn't load, verify that you added your API access keys in both scripts. If you run into a different problem, create an issue but first verify that nobody else has already reported the error.
+
+Your map will now be at http://localhost:5000/
 
 Now that we have finished the setup, we may need some python modules before running the scripts.
 `pip3 install flask`
