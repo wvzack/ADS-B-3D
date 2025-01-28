@@ -1,5 +1,6 @@
-# ADS    - B    - 3D
-Scripts for viewing your dump    - 1090 data on a 3D map. This containes 3D models that will be your aircraft which will move around a 3D globe as your dump    - 1090 data updates. 
+# ADS-B-3D
+Scripts for viewing your dump-1090 data on a 3D map. This containes 3D models that will be your aircraft which will move around a 3D globe as your 
+dump-1090 data updates. 
 
 # Disclaimer
 This is currently in a very early stage of development (this is also my first real project and first time using github), so please don't expect a perfect repository. I will also most likely not be of much help with problems that have to do with installation/setup but I will try my best to help. I would love it if everyone reported bugs in issues so that I can fix them. The installation instructions might also be a bit bad I will work on them the next time I have time.
@@ -7,7 +8,7 @@ This is currently in a very early stage of development (this is also my first re
 Thanks!
 
 # Installation
-1. These instructions will be tested on my raspberry pi running bookworm and might not work on other operating systems. You will need a cesium account.  
+1. These instructions will be tested on my raspberry pi running bookworm and might not work on other operating systems (it also works on windows but the documentation is for linux). You will need a cesium account.  
     - Sign up for one and get your api key (you will need it later).
     - https://ion.cesium.com/signup/
 
