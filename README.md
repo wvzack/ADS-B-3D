@@ -14,13 +14,13 @@ Thanks!
 
 2. Install the scripts using git (comes installed on most raspberry pis):
 
-    -  `git clone https://github.com/wvzack/ADS    - B    - 3D.git`
+    -  `git clone https://github.com/wvzack/ADS-B-3D.git`
 
 3. Change your ip adress and put in your api key:
 
     - Swap pi in the following command for your username on your Raspberry Pi.
    
-    - `nano '/home/pi/ADS    - B    - 3D/ADS    - B 3D/server.py'`
+    - `nano '/home/pi/ADS-B-3D/ADS-B-3D/server.py'`
 
     - Navagate to `Data_Fetch_Link = 'http://192.168.x.x:8080/data/aircraft.json'` replace the ip adress with the localhost link of the pi.
 
@@ -30,7 +30,7 @@ Thanks!
 
 5.  Now to configure the HTML document run:
 
-    -  `nano '/home/pi/ADS    - B    - 3D/ADS    - B 3D/templates/index.html'`
+    -  `nano '/home/pi/ADS-B-3D/ADS-B-3D/templates/index.html'`
 
     - Scroll down to `Cesium.Ion.defaultAccessToken = '';` Replace this with your token aswell.
 
@@ -39,7 +39,7 @@ Thanks!
 6. Running the script:
     - We can now try running the script with:
    
-    - `python3 python3 '/home/pi/ADS    - B    - 3D/ADS    - B 3D/server.py'`
+    - `python3 python3 '/home/pi/ADS-B-3D/ADS-B-3D/server.py'`
 
     - If you receive module not found errors, follow the installation instructions below. 
     - If the globe doesn't load, verify that you added your API access keys in both scripts. 
