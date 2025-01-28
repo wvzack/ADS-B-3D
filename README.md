@@ -53,32 +53,32 @@ Thanks!
 
 # Credits
 This project could not have been made without cesium and the 3D modelers on sketchfab:
-    - https://ion.cesium.com/
+- https://ion.cesium.com/
 
 Real UFO (Unidentified flying object) Game Ready:
 
-    - https://sketchfab.com/3d-models/real-ufo-unidentified-flying-object-game-ready-ad9c6e7c6ffa44b7a64a9b5caf6a51a5
+- https://sketchfab.com/3d-models/real-ufo-unidentified-flying-object-game-ready-ad9c6e7c6ffa44b7a64a9b5caf6a51a5
 
 Cessna 180 Skywagon:
 
-    - https://sketchfab.com/3d-models/cessna-180-skywagon-8a2d4dc6bfb447c8a7a4165023b59285
+- https://sketchfab.com/3d-models/cessna-180-skywagon-8a2d4dc6bfb447c8a7a4165023b59285
 
 Cirrus SR22:
 
-    - https://sketchfab.com/3d-models/cirrus-sr22-cba602c99c524cd4b40e5c2e5f9c5b4f
+- https://sketchfab.com/3d-models/cirrus-sr22-cba602c99c524cd4b40e5c2e5f9c5b4f
 
 Boeing 757-300 White (PW2000):
 
-    - https://sketchfab.com/3d-models/boeing-757-300-white-pw2000-72657edc823d402f84d6ff9637dfe8af
+- https://sketchfab.com/3d-models/boeing-757-300-white-pw2000-72657edc823d402f84d6ff9637dfe8af
 
 Boeing 747 Lowpoly:
 
-    - https://sketchfab.com/3d-models/boeing-747-lowpoly-12d62615984a4d1c9363fcab08bb0091
+- https://sketchfab.com/3d-models/boeing-747-lowpoly-12d62615984a4d1c9363fcab08bb0091
 
 Bell 206 Jetranger:
 
-    - https://sketchfab.com/3d-models/bell-206-jetranger-d2f7ba1d671549d4b26aaf834139a1dd
+- https://sketchfab.com/3d-models/bell-206-jetranger-d2f7ba1d671549d4b26aaf834139a1dd
 
 Air New Zealand Boeing 777-219/ER (Updated Livery):
 
-    - https://sketchfab.com/3d-models/air-new-zealand-boeing-777-219-er-updated-livery-17050ee33dfb4fe1981cac462893c158
+- https://sketchfab.com/3d-models/air-new-zealand-boeing-777-219-er-updated-livery-17050ee33dfb4fe1981cac462893c158
