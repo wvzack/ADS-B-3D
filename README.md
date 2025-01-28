@@ -5,6 +5,7 @@ Scripts for viewing your dump-1090 data on a 3D map. This containes 3D models th
 This is currently in a very early stage of development (this is also my first real project and first time using github), so please don't expect a perfect repository. I will also most likely not be of much help with problems that have to do with installation/setup but I will try my best to help. I would love it if everyone reported bugs in issues so that I can fix them. The installation instructions might also be a bit bad I will work on them the next time I have time.
 
 Thanks!
+
 # Installation
 1. These instructions will be tested on my raspberry pi running bookworm and might not work on other operating systems. You will need a cesium account.  
     Sign up for one and get your api key (you will need it later).
@@ -13,38 +14,40 @@ Thanks!
 
 2. Install the scripts using git (comes installed on most raspberry pis):
 
-    `git clone https://github.com/wvzack/ADS-B-3D.git`
+        `git clone https://github.com/wvzack/ADS-B-3D.git`
 
 3. Change your ip adress and put in your api key:
 
-    Swap pi for your username on your Raspberry Pi.
-    `nano '/home/pi/ADS-B-3D/ADS-B 3D/server.py'`
+        Swap pi in the following command for your username on your Raspberry Pi.
+       
+        `nano '/home/pi/ADS-B-3D/ADS-B 3D/server.py'`
 
-    Navagate to `Data_Fetch_Link = 'http://192.168.x.x:8080/data/aircraft.json'` replace the ip adress with the localhost link of the pi.
+        Navagate to `Data_Fetch_Link = 'http://192.168.x.x:8080/data/aircraft.json'` replace the ip adress with the localhost link of the pi.
 
-    Next go to `ACCESS_TOKEN = ''` Paste your access token (from cesium) between the parentheses.
+        Next go to `ACCESS_TOKEN = ''` Paste your access token (from cesium) between the parentheses.
 
-    Save using `ctrl+s` and then `ctrl+x`
+        Save using `ctrl+s` and then `ctrl+x`
 
-4.  Now to configure the HTML document run:
-    `nano '/home/pi/ADS-B-3D/ADS-B 3D/templates/index.html'`
+5.  Now to configure the HTML document run:
 
-    Scroll down to `Cesium.Ion.defaultAccessToken = '';` Replace this with your token aswell.
+        `nano '/home/pi/ADS-B-3D/ADS-B 3D/templates/index.html'`
 
-    Again hit `ctrl+s` and `ctrl+x`
+        Scroll down to `Cesium.Ion.defaultAccessToken = '';` Replace this with your token aswell.
 
-5. Running the script:
-    We can now try running the script with:
-    `python3 python3 '/home/pi/ADS-B-3D/ADS-B 3D/server.py'`
+        Again hit `ctrl+s` and `ctrl+x`
 
-    If you receive module not found errors, follow the installation instructions below. If the globe doesn't load, verify that you added your API access 
-    keys in both scripts. If you run into a different problem, create an issue but first check if nobody else has already reported it.
-    Your map will be available at http://localhost:5000/.
+6. Running the script:
+        We can now try running the script with:
+       
+        `python3 python3 '/home/pi/ADS-B-3D/ADS-B 3D/server.py'`
+
+        If you receive module not found errors, follow the installation instructions below. If the globe doesn't load, verify that you added your API             access keys in both scripts. If you run into a different problem, create an issue but first check if nobody else has already reported it.
+        Your map will be available at http://localhost:5000/.
    
 5. (Faculative) Now that we have finished the setup, we may need some python modules before running the scripts.
-    `pip3 install flask`
-    `pip3 install requests`
-    Now go back to the running the script section.
+        `pip3 install flask`
+        `pip3 install requests`
+        Now go back to the running the script section.
 
 # Credits
 This project could not have been made without cesium and the 3D modelers on sketchfab:
