@@ -71,19 +71,9 @@
 		// replace with your cesium api token
         Cesium.Ion.defaultAccessToken = '';
         
-        // aircraft rotations (for testing purposes currently not used)
 
         
-        let rotations = { 
-			"A1": 180,
-			"A2": 0, 
-			"A3": -90,
-			"A4": 180,
-			"A5": -90,
-			"A6": -90,
-			"A7": 90, 
-			
-		};
+
 
 
         var viewer = new Cesium.Viewer('cesiumContainer');
@@ -98,6 +88,13 @@
             var aircraftCount = 0;
             var updatedAircraft = new Set();
             var tbody = document.getElementById('aircraftTable').querySelector('tbody');
+
+
+            while (tbody.firstChild) {
+                tbody.removeChild(tbody.firstChild);
+            }
+
+
 
             data.aircraft.forEach(function (plane) {
                 if (plane.seen_pos) {
@@ -128,7 +125,6 @@
                     }
 
                     if (plane.lat && plane.lon && plane.alt_geom) {
-						var rotationCorrection = rotations[plane.category] || 0;
 						
 
                         var position = Cesium.Cartesian3.fromDegrees(plane.lon, plane.lat, plane.alt_geom);    
