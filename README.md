@@ -21,7 +21,7 @@ Thanks!
 
     - Swap pi in the following command for your username on your Raspberry Pi (default is pi).
    
-    - `nano '/home/pi/ADS-B-3D/ADS-B-3D/server.py'`
+    - `nano '/home/pi/ADS-B-3D/ADS-B 3D/server.py'`
 
     - Navagate to `Data_Fetch_Link = 'http://localhost:8080/data/aircraft.json'` Make sure you have the right port for the data.
     - 
@@ -31,7 +31,7 @@ Thanks!
 
 5.  Now to configure the HTML document run (again replace with your username):
 
-    -  `nano '/home/pi/ADS-B-3D/ADS-B-3D/templates/index.html'`
+    -  `nano '/home/pi/ADS-B-3D/ADS-B 3D/templates/index.html'`
 
     - Scroll down to `Cesium.Ion.defaultAccessToken = '';` Paste your token between the single quotation marks.
 
@@ -40,7 +40,7 @@ Thanks!
 6. Running the script:
     - We can now try running the script with (again swap for your username):
    
-    - `python3 python3 '/home/pi/ADS-B-3D/ADS-B-3D/server.py'`
+    - `python3 python3 '/home/pi/ADS-B-3D/ADS-B 3D/server.py'`
 
     - If you receive module not found errors, follow the installation instructions below. 
     - If the globe doesn't load, verify that you added your API access keys in both scripts. 
