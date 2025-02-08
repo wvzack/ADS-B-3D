@@ -131,7 +131,7 @@
   
   <script>
     // Replace with your Cesium Ion access token
-    Cesium.Ion.defaultAccessToken = 'Token Here';
+    Cesium.Ion.defaultAccessToken = '';
 
     var viewer = new Cesium.Viewer('cesiumContainer', {
       animation: false,
@@ -152,7 +152,7 @@
       }
 
       data.aircraft.forEach(function (plane) {
-        if (plane.seen_pos) {
+        if (plane.lat && plane.lon && plane.alt_geom) {
           aircraftCount += 1;
           updatedAircraft.add(plane.hex);
 
@@ -163,7 +163,7 @@
           row.style.cursor = "pointer";
 
           row.insertCell(0).textContent = plane.flight || 'N/A';
-          row.insertCell(1).textContent = plane.alt_baro || 'N/A';
+          row.insertCell(1).textContent = plane.alt_geom || 'N/A';
           row.insertCell(2).textContent = plane.gs || 'N/A';
           row.insertCell(3).textContent = plane.track || 'N/A';
           row.insertCell(4).textContent = plane.squawk || 'N/A';
@@ -173,21 +173,21 @@
           
           let lat = plane.lat ?? 0;
           let lon = plane.lon ?? 0;
-          let alt_baro = plane.alt_baro ?? 0;
+          let alt_geom = plane.alt_geom ?? 0;
           let track = plane.track ?? 0;
           let roll = plane.roll ?? 0;
           
           
           // Update or add aircraft on map
-          if (plane.lat && plane.lon && plane.alt_baro) {
-            var position = Cesium.Cartesian3.fromDegrees(lon, lat, alt_baro);    
+          if (plane.lat && plane.lon && plane.alt_geom) {
+            var position = Cesium.Cartesian3.fromDegrees(lon, lat, alt_geom);    
             var heading = Cesium.Math.toRadians(track - 90);
             var orientation = Cesium.Transforms.headingPitchRollQuaternion(position, new Cesium.HeadingPitchRoll(heading, 0.0, roll));
 
             var description = `
               <table>
                 <tr><th>Flight</th><td>${plane.flight || 'N/A'}</td></tr>
-                <tr><th>Altitude</th><td>${plane.alt_baro} ft</td></tr>
+                <tr><th>Altitude</th><td>${plane.alt_geom} ft</td></tr>
                 <tr><th>Speed</th><td>${plane.gs} knots</td></tr>
                 <tr><th>Track</th><td>${plane.track}&deg;</td></tr>
                 <tr><th>Squawk</th><td>${plane.squawk}</td></tr>
