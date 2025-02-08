@@ -19,26 +19,26 @@ Thanks!
 
 3. Change your ip adress and put in your api key:
 
-    - Swap pi in the following command for your username on your Raspberry Pi.
+    - Swap pi in the following command for your username on your Raspberry Pi (default is pi).
    
     - `nano '/home/pi/ADS-B-3D/ADS-B-3D/server.py'`
 
-    - Navagate to `Data_Fetch_Link = 'http://192.168.x.x:8080/data/aircraft.json'` replace the ip adress with the localhost link of the pi.
-
+    - Navagate to `Data_Fetch_Link = 'http://localhost:8080/data/aircraft.json'` Make sure you have the right port for the data.
+    - 
     - Next go to `ACCESS_TOKEN = ''` Paste your access token (from cesium) between the parentheses.
 
     - Save using `ctrl+s` and then `ctrl+x`
 
-5.  Now to configure the HTML document run:
+5.  Now to configure the HTML document run (again replace with your username):
 
     -  `nano '/home/pi/ADS-B-3D/ADS-B-3D/templates/index.html'`
 
-    - Scroll down to `Cesium.Ion.defaultAccessToken = '';` Replace this with your token aswell.
+    - Scroll down to `Cesium.Ion.defaultAccessToken = '';` Paste your token between the single quotation marks.
 
     - Again hit `ctrl+s` and `ctrl+x`
 
 6. Running the script:
-    - We can now try running the script with:
+    - We can now try running the script with (again swap for your username):
    
     - `python3 python3 '/home/pi/ADS-B-3D/ADS-B-3D/server.py'`
 
@@ -64,9 +64,9 @@ Cessna 180 Skywagon:
 
 - https://sketchfab.com/3d-models/cessna-180-skywagon-8a2d4dc6bfb447c8a7a4165023b59285
 
-Cirrus SR22:
+Bombardier Dash 8 - Q400
 
-- https://sketchfab.com/3d-models/cirrus-sr22-cba602c99c524cd4b40e5c2e5f9c5b4f
+- https://sketchfab.com/3d-models/dash-8-q400-with-cockpitver-ix-140a2d7680504e9b98ec4def5d4a7bdf
 
 Boeing 757-300 White (PW2000):
 

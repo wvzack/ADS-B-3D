@@ -8,8 +8,8 @@ app = Flask(__name__)
 
 logging.basicConfig(level=logging.DEBUG)
 
-ACCESS_TOKEN = ''
-Data_Fetch_Link = 'http://192.168.x.x:8080/data/aircraft.json' #swap this for your ip and port (normally on port 8080)
+ACCESS_TOKEN = 'Token Here'
+Data_Fetch_Link = 'http://xxx.xxx.x.xx:8080/data/aircraft.json' #swap this for your ip and port (normally on port 8080)
 Port = '5000'
 
 
@@ -43,4 +43,4 @@ def serve_model(filename):
     return send_from_directory('static', filename)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=Port, debug=True)
+    app.run(host='0.0.0.0', port=Port, debug=False)
