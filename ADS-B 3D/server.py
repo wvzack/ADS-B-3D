@@ -8,8 +8,8 @@ app = Flask(__name__)
 
 logging.basicConfig(level=logging.DEBUG)
 
-ACCESS_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5YmM1YmJiYi0xNzcyLTQxNmItYjk1NC05YTdmZWIyNjQ3ZWEiLCJpZCI6MjY4Nzk2LCJpYXQiOjE3MzY4MjUzMTd9.TW7J_zL0vIuGa2GhI6CjWLIKa63JLnDeM6EQjF6lJws'
-Data_Fetch_Link = 'http://192.168.2.8:8080/data/aircraft.json' #swap this for your ip and port (normally on port 8080)
+ACCESS_TOKEN = 'Token Here'
+Data_Fetch_Link = 'http://xxx.xxx.x.xx:8080/data/aircraft.json' #swap this for your ip and port (normally on port 8080)
 Port = '5000'
 
 
