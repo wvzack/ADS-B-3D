@@ -40,7 +40,7 @@ Thanks!
 6. Running the script:
     - We can now try running the script with (again swap for your username):
    
-    - `python3 python3 '/home/pi/ADS-B-3D/ADS-B 3D/server.py'`
+    - `python3 '/home/pi/ADS-B-3D/ADS-B 3D/server.py'`
 
     - If you receive module not found errors, follow the installation instructions below. 
     - If the globe doesn't load, verify that you added your API access keys in both scripts. 
