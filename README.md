@@ -1,6 +1,6 @@
 # ADS-B-3D
 Scripts for viewing your dump-1090 data on a 3D map. This containes 3D models that will be your aircraft which will move around a 3D globe as your 
-dump-1090 data updates. 
+dump-1090 data updates.
 
 # Disclaimer
 This is currently in a very early stage of development (this is also my first real project and first time using github), so please don't expect a perfect repository. I will also most likely not be of much help with problems that have to do with installation/setup but I will try my best to help. I would love it if everyone reported bugs in issues so that I can fix them. The installation instructions might also be a bit bad I will work on them the next time I have time.
@@ -51,6 +51,14 @@ Thanks!
     - `pip3 install flask`
     - `pip3 install requests`
     - Now go back to the running the script section.
+
+# Screenshots
+![A3](https://i.ibb.co/20vZythg/2025-02-08-4.png)
+![A5](https://i.ibb.co/xS2YvjCQ/2025-02-08-5.png)
+![A2](https://i.ibb.co/gLHjkfM4/2025-02-08-6.png)
+![A3](https://i.ibb.co/qYvyN1wn/2025-02-08-7.png)
+
+
 
 # Credits
 This project could not have been made without cesium and the 3D modelers on sketchfab:
