@@ -42,12 +42,11 @@
     }
     
     #cesiumContainer {
-	    width: 70%;
-	    height: 100%;
-	    min-width: 300px;   
-	    min-height: 300px;
-	}
-	
+      width: 70%;
+      height: 100%;
+      min-width: 300px;   
+      min-height: 300px;
+    }
     
     /* Table Container */
     #tableContainer {
@@ -80,7 +79,7 @@
       border-bottom: 1px solid #f1f1f1;
     }
     
-    tr:hover {
+    tbody tr:hover {
       background-color: #f5f5f5;
       cursor: pointer;
     }
@@ -147,112 +146,4 @@
       var tbody = document.getElementById('aircraftTable').querySelector('tbody');
 
       // Clear old table rows
-      while (tbody.firstChild) {
-        tbody.removeChild(tbody.firstChild);
-      }
-
-      data.aircraft.forEach(function (plane) {
-        if (plane.lat && plane.lon && plane.alt_geom) {
-          aircraftCount += 1;
-          updatedAircraft.add(plane.hex);
-
-          // Create new row for aircraft
-          var row = tbody.insertRow();
-          row.setAttribute('id', plane.hex);
-          row.onclick = function() { viewAircraft(plane.hex); };
-          row.style.cursor = "pointer";
-
-          row.insertCell(0).textContent = plane.flight || 'N/A';
-          row.insertCell(1).textContent = plane.alt_geom || 'N/A';
-          row.insertCell(2).textContent = plane.gs || 'N/A';
-          row.insertCell(3).textContent = plane.track || 'N/A';
-          row.insertCell(4).textContent = plane.squawk || 'N/A';
-          row.insertCell(5).textContent = plane.hex || 'N/A';
-          row.insertCell(6).textContent = plane.seen_pos;
-          row.insertCell(7).textContent = plane.seen;
-          
-          let lat = plane.lat ?? 0;
-          let lon = plane.lon ?? 0;
-          let alt_geom = plane.alt_geom ?? 0;
-          let track = plane.track ?? 0;
-          let roll = plane.roll ?? 0;
-          
-          
-          // Update or add aircraft on map
-          if (plane.lat && plane.lon && plane.alt_geom) {
-            var position = Cesium.Cartesian3.fromDegrees(lon, lat, alt_geom);    
-            var heading = Cesium.Math.toRadians(track - 90);
-            var orientation = Cesium.Transforms.headingPitchRollQuaternion(position, new Cesium.HeadingPitchRoll(heading, 0.0, roll));
-
-            var description = `
-              <table>
-                <tr><th>Flight</th><td>${plane.flight || 'N/A'}</td></tr>
-                <tr><th>Altitude</th><td>${plane.alt_geom} ft</td></tr>
-                <tr><th>Speed</th><td>${plane.gs} knots</td></tr>
-                <tr><th>Track</th><td>${plane.track}&deg;</td></tr>
-                <tr><th>Squawk</th><td>${plane.squawk}</td></tr>
-                <tr><th>ICAO</th><td>${plane.hex}</td></tr>
-                <tr><th>Category</th><td>${plane.category}</td></tr>
-                <tr><th>Pos Age</th><td>${plane.seen_pos}</td></tr>
-              </table>
-            `;
-
-            if (!aircraftEntities[plane.hex]) {
-              aircraftEntities[plane.hex] = viewer.entities.add({
-                id: plane.hex,
-                position: position,
-                orientation: orientation,
-                model: {
-                  uri: '/models/' + plane.category + '.glb',
-                  scale: 1.0
-                },
-                label: {
-                  text: plane.flight || 'N/A',
-                  font: '14pt Roboto, sans-serif',
-                  style: Cesium.LabelStyle.FILL_AND_OUTLINE,
-                  outlineWidth: 2,
-                  verticalOrigin: Cesium.VerticalOrigin.TOP,
-                  pixelOffset: new Cesium.Cartesian2(0, 0)
-                },
-                description: description
-              });
-            } else {
-              aircraftEntities[plane.hex].position = position;
-              aircraftEntities[plane.hex].orientation = orientation;
-              aircraftEntities[plane.hex].description = description;
-              
-            }
-          }
-        }
-      });
-
-      // Update document title with aircraft count
-      document.title = `(${aircraftCount}) 3D Map`;
-
-      // Remove entities that are no longer updated
-      for (var id in aircraftEntities) {
-        if (!updatedAircraft.has(id)) {
-          viewer.entities.remove(aircraftEntities[id]);
-          delete aircraftEntities[id];
-        }
-      }
-    }
-
-    function fetchADSBBData() {
-      fetch('/adsb_data')
-        .then(response => response.json())
-        .then(data => {
-          updateAircraft(data);
-        })
-        .catch(error => console.error('Error fetching ADS-B data:', error));
-    }
-
-    function viewAircraft(hex) {
-      viewer.trackedEntity = aircraftEntities[hex];
-    }
-
-    // Refresh ADS-B 
-    setInterval(fetchADSBBData, 1000);
-  </script>
-</body>
-</html>
+      whil
